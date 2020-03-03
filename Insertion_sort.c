@@ -1,10 +1,13 @@
 
 #include <math.h> 
 #include <stdio.h> 
-  
+#include<time.h>  
 
 void insertionSort(int arr[], int n) 
 { 
+    int time;
+    clock_t startl,endl;
+    startl=clock();
     int i, key, j; 
     for (i = 1; i < n; i++) { 
         key = arr[i]; 
@@ -16,6 +19,9 @@ void insertionSort(int arr[], int n)
         } 
         arr[j + 1] = key; 
     } 
+        endl=clock();
+    time=(int)(endl-startl);
+    printf("Time taken to Insertion sort : %d \n",time);
 } 
   
 
